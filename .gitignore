@@ -1,12 +1,16 @@
-*.class
+/sonar-project.properties
+menschen/.classpath
+menschen/.factorypath
+menschen/.project
+menschen/.settings
+menschen/target
+.idea
+menschen/src/main/resources/META-INF/persistence.xml
+menschen/src/test/resources/arquillian.xml
+.metadata
+menschen/src/test/resources/META-INF/test-persistence.xml
+menschen/src/main/webapp/assets/bower_components
+.tern-project
+menschen/src/main/resources/META-INF/apache-deltaspike.properties
+menschen/bin/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
