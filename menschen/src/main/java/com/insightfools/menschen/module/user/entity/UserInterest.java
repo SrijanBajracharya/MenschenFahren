@@ -14,6 +14,11 @@ import javax.persistence.Table;
 
 import com.insightfools.menschen.module.event.entity.Event;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijanbajracharya@lftechnology.com>
+ *
+ */
 @Entity
 @Table(name = "user_interest")
 public class UserInterest implements Serializable {

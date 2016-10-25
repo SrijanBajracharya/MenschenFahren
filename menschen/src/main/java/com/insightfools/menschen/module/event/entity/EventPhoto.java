@@ -12,6 +12,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijanbajracharya@lftechnology.com>
+ *
+ */
 @Entity
 @Table(name = "event_photo")
 public class EventPhoto implements Serializable {

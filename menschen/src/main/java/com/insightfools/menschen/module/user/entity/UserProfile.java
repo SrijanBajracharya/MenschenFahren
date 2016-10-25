@@ -11,6 +11,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijanbajracharya@lftechnology.com>
+ *
+ */
 @Entity
 @Table(name = "user_profile")
 public class UserProfile implements Serializable {

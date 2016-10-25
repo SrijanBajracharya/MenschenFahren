@@ -10,6 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijanbajracharya@lftechnology.com>
+ *
+ */
 @Entity
 @Table(name = "event_status")
 public class EventStatus implements Serializable {
