@@ -38,6 +38,10 @@ public class UserInterest implements Serializable {
     @Column(name = "recorded_at")
     private LocalDateTime recordedAt;
 
+    public UserInterest() {
+
+    }
+
     public Long getId() {
         return id;
     }

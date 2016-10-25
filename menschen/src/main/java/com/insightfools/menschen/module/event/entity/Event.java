@@ -28,20 +28,17 @@ public class Event implements Serializable {
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
-    @Column(name = "event_address")
+    @Column(name = "address")
     private String address;
 
-    @Column(name = "event_name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "event_title")
+    @Column(name = "title")
     private String title;
 
-    @Column(name = "event_description")
+    @Column(name = "description")
     private String description;
-
-    @Column(name = "event_url")
-    private String url;
 
     @Column(name = "created_by")
     private Long createdBy;
@@ -51,6 +48,10 @@ public class Event implements Serializable {
 
     @Column(name = "recorded_at")
     private LocalDateTime recordedAt;
+
+    public Event() {
+
+    }
 
     public Long getId() {
         return id;
@@ -100,14 +101,6 @@ public class Event implements Serializable {
         this.description = description;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public Long getCreatedBy() {
         return createdBy;
     }
@@ -135,8 +128,7 @@ public class Event implements Serializable {
     @Override
     public String toString() {
         return "Event [id=" + id + ", category=" + category + ", address=" + address + ", name=" + name + ", title=" + title
-                + ", description=" + description + ", url=" + url + ", createdBy=" + createdBy + ", status=" + status + ", recordedAt="
-                + recordedAt + "]";
+                + ", description=" + description + ", createdBy=" + createdBy + ", status=" + status + ", recordedAt=" + recordedAt + "]";
     }
 
 }

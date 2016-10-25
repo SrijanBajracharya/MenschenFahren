@@ -12,8 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.insightfools.menschen.module.category.entity.Category;
-
 @Entity
 @Table(name = "event_photo")
 public class EventPhoto implements Serializable {
@@ -28,15 +26,15 @@ public class EventPhoto implements Serializable {
     @JoinColumn(name = "event_id", referencedColumnName = "id")
     private Event event;
 
-    @ManyToOne
-    @JoinColumn(name = "category_id", referencedColumnName = "id")
-    private Category category;
-
     @Column(name = "url")
     private String photoUrl;
 
     @Column(name = "recorded_at")
     private LocalDateTime recordedAt;
+
+    public EventPhoto() {
+
+    }
 
     public Long getId() {
         return id;
@@ -52,14 +50,6 @@ public class EventPhoto implements Serializable {
 
     public void setEvent(Event event) {
         this.event = event;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 
     public String getPhotoUrl() {
@@ -80,8 +70,7 @@ public class EventPhoto implements Serializable {
 
     @Override
     public String toString() {
-        return "EventPhoto [id=" + id + ", event=" + event + ", category=" + category + ", photoUrl=" + photoUrl + ", recordedAt="
-                + recordedAt + "]";
+        return "EventPhoto [id=" + id + ", event=" + event + ", photoUrl=" + photoUrl + ", recordedAt=" + recordedAt + "]";
     }
 
 }

@@ -1,4 +1,4 @@
-package com.insightfools.menschen.module.category.entity;
+package com.insightfools.menschen.module.event.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -11,10 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "category")
-public class Category implements Serializable {
+@Table(name = "event_status")
+public class EventStatus implements Serializable {
 
-    private static final long serialVersionUID = -4794797347059804500L;
+    private static final long serialVersionUID = 4246393217135767597L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,24 +23,14 @@ public class Category implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "title")
-    private String title;
-
     @Column(name = "description")
     private String description;
-
-    @Column(name = "status")
-    private Boolean status;
-
-    @Column(name = "recorded_at")
-    private LocalDateTime recordedAt;
 
     @Column(name = "dropdown_order")
     private Integer dropdownOrder;
 
-    public Category() {
-
-    }
+    @Column(name = "recorded_at")
+    private LocalDateTime recordedAt;
 
     public Long getId() {
         return id;
@@ -58,36 +48,12 @@ public class Category implements Serializable {
         this.name = name;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Boolean getStatus() {
-        return status;
-    }
-
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
-
-    public LocalDateTime getRecordedAt() {
-        return recordedAt;
-    }
-
-    public void setRecordedAt(LocalDateTime recordedAt) {
-        this.recordedAt = recordedAt;
     }
 
     public Integer getDropdownOrder() {
@@ -98,10 +64,18 @@ public class Category implements Serializable {
         this.dropdownOrder = dropdownOrder;
     }
 
+    public LocalDateTime getRecordedAt() {
+        return recordedAt;
+    }
+
+    public void setRecordedAt(LocalDateTime recordedAt) {
+        this.recordedAt = recordedAt;
+    }
+
     @Override
     public String toString() {
-        return "Category [id=" + id + ", name=" + name + ", title=" + title + ", description=" + description + ", status=" + status
-                + ", recordedAt=" + recordedAt + ", dropdownOrder=" + dropdownOrder + "]";
+        return "EventStatus [id=" + id + ", name=" + name + ", description=" + description + ", dropdownOrder=" + dropdownOrder
+                + ", recordedAt=" + recordedAt + "]";
     }
 
 }
