@@ -8,13 +8,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "category")
+@NamedQueries({ @NamedQuery(name = Category.FIND_ALL, query = Category.FIND_ALL_QUERY) })
 public class Category implements Serializable {
 
     private static final long serialVersionUID = -4794797347059804500L;
+
+    public static final String PREFIX = "category.category";
+    public static final String FIND_ALL = PREFIX + "findAll";
+    public static final String FIND_ALL_QUERY = "SELECT c FROM Category c";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -4,14 +4,17 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
 
 import com.insightfools.menschen.exception.DeleteFailException;
 import com.insightfools.menschen.exception.NotFoundException;
 import com.insightfools.menschen.exception.SaveFailException;
+import com.insightfools.menschen.logger.LogMaker;
 import com.insightfools.menschen.module.user.entity.UserInterest;
 import com.insightfools.menschen.orm.GenericDao;
 
+@Interceptors({ LogMaker.class })
 public class UserInterestDao implements GenericDao<UserInterest, Long> {
 
     @Inject

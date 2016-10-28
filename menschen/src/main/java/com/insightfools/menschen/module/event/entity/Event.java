@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import com.insightfools.menschen.module.category.entity.Category;
@@ -18,9 +20,14 @@ import com.insightfools.menschen.orm.BaseEntity;
  */
 @Entity
 @Table(name = "event")
+@NamedQueries({ @NamedQuery(name = Event.FIND_ALL, query = Event.FIND_ALL_QUERY) })
 public class Event extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 6105816132102574483L;
+
+    public static final String PREFIX = "event.event";
+    public static final String FIND_ALL = PREFIX + "findAll";
+    public static final String FIND_ALL_QUERY = "SELECT e FROM Event e";
 
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
