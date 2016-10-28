@@ -1,15 +1,15 @@
 package com.insightfools.menschen.module.user.entity;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+
+import com.insightfools.menschen.orm.BaseEntity;
 
 /**
  * 
@@ -18,13 +18,14 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @Table(name = "user_profile")
-public class UserProfile implements Serializable {
+@NamedQueries({ @NamedQuery(name = UserProfile.FIND_ALL, query = UserProfile.FIND_ALL_QUERY) })
+public class UserProfile extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -6784843359738908424L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public static final String PREFIX = "user.userProfile";
+    public static final String FIND_ALL = PREFIX + "findAll";
+    public static final String FIND_ALL_QUERY = "SELECT up FROM UserProfile up";
 
     @Column(name = "first_name")
     @NotNull
@@ -48,19 +49,8 @@ public class UserProfile implements Serializable {
     @Column(name = "status")
     private Boolean status;
 
-    @Column(name = "recorded_at")
-    private LocalDateTime recordedAt;
-
     public UserProfile() {
 
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getFirstName() {
@@ -111,18 +101,10 @@ public class UserProfile implements Serializable {
         this.status = status;
     }
 
-    public LocalDateTime getRecordedAt() {
-        return recordedAt;
-    }
-
-    public void setRecordedAt(LocalDateTime recordedAt) {
-        this.recordedAt = recordedAt;
-    }
-
     @Override
     public String toString() {
-        return "UserProfile [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", phoneNumber="
-                + phoneNumber + ", profilePhoto=" + profilePhoto + ", status=" + status + ", recordedAt=" + recordedAt + "]";
+        return "UserProfile [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", phoneNumber=" + phoneNumber
+                + ", profilePhoto=" + profilePhoto + ", status=" + status + "]";
     }
 
 }

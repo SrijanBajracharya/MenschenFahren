@@ -1,18 +1,17 @@
 package com.insightfools.menschen.module.user.entity;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import com.insightfools.menschen.module.event.entity.Event;
+import com.insightfools.menschen.orm.BaseEntity;
 
 /**
  * 
@@ -21,13 +20,14 @@ import com.insightfools.menschen.module.event.entity.Event;
  */
 @Entity
 @Table(name = "user_interest")
-public class UserInterest implements Serializable {
+@NamedQueries({ @NamedQuery(name = UserInterest.FIND_ALL, query = UserInterest.FIND_ALL_QUERY) })
+public class UserInterest extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -101989028138457982L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public static final String PREFIX = "user.userInterest";
+    public static final String FIND_ALL = PREFIX + "findAll";
+    public static final String FIND_ALL_QUERY = "SELECT ui FROM UserInterest ui";
 
     @ManyToOne
     @JoinColumn(name = "user_profile_id", referencedColumnName = "id")
@@ -40,19 +40,8 @@ public class UserInterest implements Serializable {
     @Column(name = "status")
     private Boolean status;
 
-    @Column(name = "recorded_at")
-    private LocalDateTime recordedAt;
-
     public UserInterest() {
 
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public UserProfile getUserProfile() {
@@ -79,18 +68,9 @@ public class UserInterest implements Serializable {
         this.status = status;
     }
 
-    public LocalDateTime getRecordedAt() {
-        return recordedAt;
-    }
-
-    public void setRecordedAt(LocalDateTime recordedAt) {
-        this.recordedAt = recordedAt;
-    }
-
     @Override
     public String toString() {
-        return "UserInterest [id=" + id + ", userProfile=" + userProfile + ", event=" + event + ", status=" + status + ", recordedAt="
-                + recordedAt + "]";
+        return "UserInterest [userProfile=" + userProfile + ", event=" + event + ", status=" + status + "]";
     }
 
 }
