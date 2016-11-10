@@ -1,0 +1,509 @@
+*:after {
+	clear: both;
+	display: block;
+	content: "";
+}
+
+a {
+	-webkit-transition: color .3s, background .3s, opacity .3s, border .3s, box-shadow .3s;
+	transition: color .3s, background .3s, opacity .3s, border .3s, box-shadow .3s;
+}
+
+.payment h2 {
+	font-size: 24px/36px Brandon_reg;
+	color: #174D83;
+}
+
+.payment h3 {
+	margin-bottom: 20px;
+}
+
+.payment .info-sidebar h3 {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.payment ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.payment .vehicle-info {
+	border-bottom: 1px solid #d8d8d8;
+	position: relative;
+	padding:30px 0;
+}
+
+.payment .step li a {
+	font-family: 14px/20px Brandon_reg;
+	color: rgba(0, 0, 0, 0.54);
+	text-transform: uppercase;
+	display: block;
+	border-bottom: 3px solid #d8d8d8;
+	padding-bottom: 10px;
+}
+
+.payment .step li a:hover,
+.payment .step li.active a {
+	color: rgba(0, 0, 0, .84);
+	border-bottom: 3px solid #174D83;
+}
+
+.payment .img-holder {
+	width: 125px;
+	height: 125px;
+	margin: 0 auto 20px;
+}
+
+.payment .img-holder img {
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+.payment .car-info h3{
+	text-align: center;
+}
+.payment .car-info ul {
+	text-align: center;
+}
+
+.payment .car-info li {
+	display: inline-block;
+	font-family: 14px/20px Brandon_reg;
+	color: #262626;
+	margin: 0 40px;
+}
+
+.payment .car-info li span {
+	display: block;
+	font-weight: bold;
+}
+
+.payment .price {
+	font-family: bold 22px/1 Brandon_bld;
+	color: #00A7E4;
+	margin: 30px 0;
+	text-align: center;
+}
+.payment .checkout{
+	text-align: right;
+}
+.payment .checkout a {
+	margin-top: 30px;
+}
+
+.payment .billing-info {
+	margin-top: 20px;
+}
+
+.payment .form-block.cs-form {
+	min-height: inherit;
+}
+
+.payment .group {
+	margin: 15px 0;
+}
+
+.payment .jcf-select.jcf-unselectable {
+	margin-top: 39px;
+	border-width: 1px;
+	text-align: left;
+}
+
+.payment .method {
+	font: 18px/1 Brandon_bld;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #d8d8d8;
+	margin: 40px 0;
+}
+
+.payment .card-list {
+	text-align: center;
+}
+
+.payment .card-list li {
+	float: left;
+	margin-right: 40px;
+}
+
+.payment .card-list a span {
+	border: 1px solid;
+	border-radius: 50%;
+	display: block;
+	height: 96px;
+	line-height: 96px;
+	text-align: center;
+	vertical-align: middle;
+	width: 96px;
+}
+
+.payment .modal .modal-header {
+	border-color: #d8d8d8;
+}
+
+.payment .modal .card-info {
+	margin-bottom: 20px;
+}
+
+.payment .modal .card-list {
+	text-align: left;
+	font-size: 14px;
+}
+
+.payment .modal .card-list ul {
+	margin-top: 20px;
+}
+
+.payment .modal .card-list li {
+	margin-right: 10px;
+}
+
+.payment .modal-body .group {
+	position: relative;
+	text-align: left;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.payment .modal-body .billing-info {
+	margin: 0;
+}
+
+.payment .modal-body .billing-info label {
+	left: 0;
+	top: -15px;
+	font-size: 14px;
+}
+
+.payment .modal-body .billing-info input:focus ~ label,
+.payment .modal-body .billing-info textarea:focus ~ label,
+.payment .modal-body .billing-info select:focus ~ label {
+	top: -20px;
+}
+
+.payment .modal-body .select-label {
+	margin-top: -5px;
+}
+
+.payment .modal-body .group .month {
+	width: 60%;
+	float: left;
+}
+
+.payment .modal-body .group .year {
+	width: 35%;
+	float: right;
+}
+
+.payment .modal-body .jcf-select.jcf-unselectable {
+	margin-top: 0;
+}
+
+.card-list-table {
+	text-align: left;
+	font: 14px/1 "Brandon_bld", sans-serif;
+}
+
+.card-list-table span {
+	font-family: 'Brandon_reg', sans-serif;
+}
+
+.card-list-table img {
+	margin-right: 20px;
+}
+
+.card-list-table .currency {
+	margin-right: 10px;
+	display: inline-block;
+	font: 20px/1 'Brandon_bld', sans-serif;
+}
+
+.card-list-table input[type='text'] {
+	width: 65px;
+}
+
+.payment .cs-form input[type="text"],
+.payment .cs-form input[type="password"],
+.payment .cs-form input[type="phone"],
+.payment .cs-form input[type="email"],
+.payment .cs-form input[type="number"],
+.payment .cs-form input[type="tel"] {
+	max-width: inherit;
+	border-radius: 0;
+}
+
+.payment .title-link {
+	font: 16px/1 'Brandon_reg';
+	margin-bottom: 20px;
+}
+
+.card-list-table .table td {
+	padding: 20px 10px;
+}
+
+.cust-grid-1 {
+	padding: 0 15px;
+	position: relative;
+}
+
+@media (min-width:640px) {
+	.cust-grid-1 {
+		width: 50%;
+		float: left;
+	}
+
+	.cust-grid-full {
+		width: 100%;
+	}
+
+	.cust-grid-3 {
+		width: 33.33%
+	}
+}
+
+@media (min-width:768px) {
+	.payment {
+		text-align: left;
+	}
+
+	.payment .step li {
+		float: left;
+		width: 33.33%;
+	}
+
+	.payment .img-holder {
+		float: left;
+		margin: 0 30px 0 0;
+	}
+
+	.payment .car-info {
+		float: left;
+		max-width: 85%;
+		margin-right: 100px;
+		width: auto;
+		padding: 0;
+	}
+
+	.payment .price {
+		position: absolute;
+		right: 0;
+		top: 40px;
+		margin: 0;
+	}
+
+	.payment .car-info ul {
+		text-align: left;
+	}
+
+	.payment .car-info li {
+		float: left;
+		display: inherit;
+		margin: 0 40px 0 0;
+		text-align: left;
+	}
+
+	.payment .checkout a {
+		float: right;
+	}
+
+	.info-sidebar {
+		border: 1px solid #d8d8d8;
+		text-align: center;
+		padding: 20px;
+		font-size: 12px;
+	}
+
+	.info-sidebar .vehicle-info {
+		border: none;
+	}
+
+	.info-sidebar .img-holder {
+		float: inherit;
+		margin: 0 auto 20px;
+	}
+
+	.info-sidebar .car-info {
+		max-width: inherit;
+		margin: 0;
+	}
+
+	.info-sidebar  .car-info ul {
+		text-align: center;
+	}
+
+	.info-sidebar  .car-info li {
+		display: inline-block;
+		float: inherit;
+		margin: 0 20px;
+		text-align: center;
+	}
+
+	.info-sidebar strong {
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.info-sidebar .price {
+		position: static;
+		background: #00A7E4;
+		border-radius: 2px;
+		color: #FFF;
+		padding: 5px 10px;
+		display: inline-block;
+		margin: 20px 0;
+	}
+
+	.info-sidebar .billing-info {
+		text-align: left;
+		font-size: 12px;
+		border-top: 1px solid #d8d8d8;
+		padding-top: 20px;
+	}
+
+	.info-sidebar .billing-info h3 {
+		text-transform: uppercase;
+	}
+
+	.info-sidebar .billing-info li {
+		display: block;
+		margin: 5px 0;
+	}
+
+	.info-sidebar .billing-info li strong {
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	.info-sidebar .billing-info li span {
+		display: block;
+	}
+
+	.payment .modal-dialog {
+		width: 670px;
+	}
+
+	.payment .modal .card-info {
+		float: left;
+		width: 55%;
+		padding-right: 5%;
+	}
+
+	.payment .modal .card-list {
+		float: right;
+		width: 40%;
+	}
+
+	.payment .modal .card-info {
+		border-right: 1px solid #d8d8d8;
+		margin-bottom: 0px;
+	}
+
+	.card-list-table input[type='text'] {
+		width: auto;
+	}
+
+	.cust-grid-1 {
+		width: 33.33%;
+	}
+	.payment .price, .payment .car-info h3{
+		text-align: left;
+	}
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+	.hidden-sm {
+		display: none !important
+	}
+
+}
+
+/* LABEL ======================================= */
+.information-container label,
+.payment .billing-info label {
+	color: #666666;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: -5px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.payment .billing-info label {
+	left: 15px;
+	top: 10px
+}
+
+/* active state */
+.information-container input:focus ~ label,
+.information-container textarea:focus ~ label,
+.payment  .billing-info input:focus ~ label,
+.payment  .billing-info textarea:focus ~ label,
+.payment  .billing-info select:focus ~ label {
+	top: -20px;
+	font-size: 14px;
+	color: #1b4e81;
+}
+
+.payment  .billing-info input:focus ~ label,
+.payment  .billing-info textarea:focus ~ label,
+.payment  .billing-info select:focus ~ label {
+	top: 0;
+}
+
+/* BOTTOM BARS ================================= */
+.information-container .bar,
+.payment .billing-info .bar {
+	position: relative;
+	display: block;
+}
+
+.information-container .bar:before,
+.payment  .billing-info .bar:before,
+.information-container .bar:after,
+.payment  .billing-info .bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #1aa8e1;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.information-container .bar:before,
+.payment .billing-info .bar:before {
+	left: 50%;
+}
+
+.information-container .bar:after,
+.payment .billing-info .bar:after {
+	right: 50%;
+}
+
+/* active state */
+.information-container input:focus ~ .bar:before,
+.information-container input:focus ~ .bar:after,
+.information-container textarea:focus ~ .bar:before,
+.information-container textarea:focus ~ .bar:after,
+.payment  .billing-info input:focus ~ .bar:before,
+.payment  .billing-info input:focus ~ .bar:after,
+.payment .billing-info textarea:focus ~ .bar:before,
+.payment .billing-info textarea:focus ~ .bar:after {
+	width: 50%;
+}
+.cs-form input[type="text"],
+.cs-form input[type="password"],
+.cs-form input[type="phone"],
+.cs-form input[type="email"],
+.cs-form input[type="number"],
+.cs-form input[type="tel"] {
+	border-radius: 0;
+}

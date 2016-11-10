@@ -1,0 +1,11 @@
+@media all and (min-width: 324px) {
+    .signup-link-small {
+        display: none !important;
+    }
+}
+
+@media all and (max-width :324px) {
+    .signup-link {
+        display: none !important;
+    }
+}

@@ -1,28 +1,33 @@
 package com.insightfools.menschen.module.event.entity;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import com.insightfools.menschen.module.category.entity.Category;
+import com.insightfools.menschen.orm.BaseEntity;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijanbajracharya@lftechnology.com>
+ *
+ */
 @Entity
 @Table(name = "event")
-public class Event implements Serializable {
+@NamedQueries({ @NamedQuery(name = Event.FIND_ALL, query = Event.FIND_ALL_QUERY) })
+public class Event extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 6105816132102574483L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public static final String PREFIX = "event.event";
+    public static final String FIND_ALL = PREFIX + "findAll";
+    public static final String FIND_ALL_QUERY = "SELECT e FROM Event e";
 
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
@@ -46,19 +51,8 @@ public class Event implements Serializable {
     @Column(name = "status")
     private Boolean status;
 
-    @Column(name = "recorded_at")
-    private LocalDateTime recordedAt;
-
     public Event() {
 
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Category getCategory() {
@@ -117,18 +111,10 @@ public class Event implements Serializable {
         this.status = status;
     }
 
-    public LocalDateTime getRecordedAt() {
-        return recordedAt;
-    }
-
-    public void setRecordedAt(LocalDateTime recordedAt) {
-        this.recordedAt = recordedAt;
-    }
-
     @Override
     public String toString() {
-        return "Event [id=" + id + ", category=" + category + ", address=" + address + ", name=" + name + ", title=" + title
-                + ", description=" + description + ", createdBy=" + createdBy + ", status=" + status + ", recordedAt=" + recordedAt + "]";
+        return "Event [category=" + category + ", address=" + address + ", name=" + name + ", title=" + title + ", description="
+                + description + ", createdBy=" + createdBy + ", status=" + status + "]";
     }
 
 }
