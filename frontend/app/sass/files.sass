@@ -1,0 +1,782 @@
+$background-no-repeat: no-repeat
+$default-font: 12px
+$font-family: Arial
+$z-index: 102
+$background: #cecece
+$default-text-align: center
+$default-color: #fff
+$default-transition: all 200ms ease-out 0s
+
+=webkit-function($value)
+  -webkit-touch-callout: $value
+  -webkit-user-select: $value
+  -khtml-user-select: $value
+  -moz-user-select: $value
+  -ms-user-select: $value
+  -o-user-select: $value
+  user-select: $value
+
+=border-radius($radius)
+  border-radius: $radius
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+
+@mixin clearfix()
+  &:before,
+  &:after
+    content: ""
+    display: table
+
+  &:after
+    clear: both
+
+.bg-grey
+  background: #fbfbfb
+
+.blog-header
+  clear: both
+  overflow: hidden
+  margin: 0
+  position: relative
+
+.blog-container
+  clear: both
+  overflow: hidden
+
+.blog-header
+  border-bottom: 1px solid $background
+  text-align: $default-text-align
+  padding: 80px 0
+  margin-bottom: 60px
+
+.blog-header
+  h2
+    font-size: 36px
+    margin-bottom: 20px
+    color: $default-color
+
+.blog-header
+  h2
+    &:after
+      background: $background
+      content: ""
+      display: block
+      height: 2px
+      margin: 20px auto 0
+      text-align: $default-text-align
+      width: 100px
+
+.blog-header
+  span
+    font-size: 2 * $default-font
+    color: $default-color
+
+.blog-item
+  clear: both
+  overflow: hidden
+  margin: 0
+
+.blog-item
+  ul
+    list-style: none
+    margin: -2px 0 0 -2px
+    padding: 0
+    border-top: 1px solid #fbfbfb
+    clear: both
+    overflow: hidden
+
+.blog-item
+  ul
+    li
+      background: transparent
+      box-sizing: border-box
+      cursor: pointer
+      float: left
+      margin: 0
+      overflow: hidden
+      padding: 0
+      position: relative
+      transition: $default-transition
+      width: 33.333%
+      border-left: 1px solid #f1f1f1
+      border-top: 1px solid #f1f1f1
+
+.blog-item
+  a
+    color: #888888
+    display: block
+    padding: 40px
+    transition: $default-transition
+
+.blog-item
+  a
+    &:hover
+      background: $default-color
+
+.blog-image
+  position: relative
+
+.blog-content
+  padding: 15px 0 0
+
+.blog-item
+  h2
+    font-size: 18px
+    margin-bottom: 10px
+
+.blog-detail-content
+  img
+    &.f-right
+      margin: 0 0 30px 30px
+
+.blog-detail-content
+  img
+    &.f-left
+      margin: 0 30px 30px 0
+
+.blog-item
+  h2
+    a
+      color: #333333
+
+.blog-pager
+  clear: both
+  overflow: hidden
+  padding: 50px 0
+  border-top: 1px solid #9b9b9b
+
+.pb-0
+  padding-bottom: 0
+
+.grid-wrap
+  clear: both
+  margin: 0 auto
+  padding: 0
+
+.grid
+  margin: 0 auto
+  padding: 0
+  list-style: none
+  min-height: 500px
+
+.js
+  .gird.loaded
+    background: none
+
+
+.grid
+  li
+    display: inline-block
+    overflow: hidden
+    width: 314px
+    text-align: left
+    vertical-align: top
+
+.grid
+  li
+    &.wide
+      width: 942px
+
+.js
+  .gird
+    li
+      display: none
+      float: left
+
+.js
+  .grid
+    &.loaded
+      li
+        display: block
+
+
+/*Title box*/
+
+/*Anchor and image*/
+
+.grid
+  li
+    > a,
+    .grid
+      li
+        img
+          display: block
+          outline: none
+          border: none
+
+.grid
+  li
+    > a
+      position: relative
+      overflow: hidden
+      margin: 7px
+
+.grid
+  .curtain
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 100
+
+.grid
+  &.swipe-right
+    .curtain
+      -webkit-transform: translate3d(-100%,0,0)
+      transform: translate3d(-100%,0,0)
+
+.grid
+  &.swipe-down
+    .curtain
+      -webkit-transform: translate3d(0,-100%,0)
+      transform: translate3d(0,-100%,0)
+
+.grid
+  &.swipe-rotate
+    .curtain
+      width: 200%
+      height: 200%
+      -webkit-transform: rotate3d(0,0,1,90deg)
+      tranform: rotate3d(0,0,1,90deg)
+      -webkit-transform-origin: top left
+      transform-origin: top left
+
+/*Shadow*/
+
+.grid
+  .curtain
+    &::after
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,1)
+      content: ""
+
+.grid
+  &.swipe-right
+    .curtain
+      &::after,
+      .grid
+        &.swipe-rotate
+          .curtain
+            &::after
+              left: -100%
+
+.grid
+  &.swipe-down
+    .curtain
+      &::after
+        top: -100%
+
+/*Title*/
+
+.grid
+  li
+    h3
+      position: absolute
+      bottom: 0
+      left: 0
+      margin: 0
+      padding: 20px
+      width: 100%
+      background: rgba(0,0,0,0.6)
+      color: #D3EEE2
+      text-align: right
+      text-transform: uppercase
+      letter-spacing: 1px
+      font-size: 1em
+      -webkit-transition: -webkit-transform 0.2s, color 0.2s
+      transition: transform 0.2s, color 0.2s
+
+
+
+/*Pseudo element for hover effect*/
+
+.grid
+  li
+    > a
+      &::before
+        position: absolute
+        top: 0
+        left: 0
+        width: 100.5%
+        height: 100.5%
+        border: 0px solid transparent
+        background: rgba(0,0,0,0)
+        content: ""
+        -webkit-transition: border-width 0.2s, border-color 0.2s
+        trasition: border-width 0.2s, border-color 0.2s
+
+
+/*Hover effects*/
+
+.grid
+  li
+    &.shown
+      &:hover
+        h3
+          color: $default-color
+          -webkit-transform: translate3d(0,-30px,0)
+          transform: translate3d(0,-30px,0)
+
+.grid
+  li
+    &.shown
+      &:hover
+        > a
+          &::before
+            border-width: 14px
+            border-color: #000000
+
+/*Animations*/
+
+/*Swipe right*/
+
+.grid
+  &.swipe-right
+    li
+      &.animate
+        .curtain
+          -webkit-animation: swipeRight 1.5s cubic-bezier(0.6,0,0.4,1) forwards
+          animation: swipeRight 1.5s cubic-bezier(0.6,0,0.4,1) forwards
+
+
+
+@keyframes swipeRight
+  0%
+  50%,60%
+    -webkit-transform: translate3d(0,0,0)
+    transform: translate(0)
+  100%
+    -webkit-transform: translate3d(100%,0,0)
+    transform: translate3d(100%,0,0)
+
+/*Shadow*/
+
+.grid
+  li
+    &.animate
+      .curtain
+        &::after
+          -webkit-animation: fadeOut 1.5s ease forwards
+          animation: fadeOut 1.5s ease forwards
+          -webkit-animation-delay: inherit
+          animation-delay: inherit
+
+@-webkit-keyframes fadeOut
+  0%
+  50%,60%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes fadeOut
+  0%
+  50%,60%
+    opacity: 1
+  100%
+    opacity: 0
+
+
+/*Hide image and title and show at half time*/
+
+.js
+  .grid
+    li
+      img,
+      .js
+        .grid
+          li
+            h3
+              visibility: hidden
+
+.grid
+  li
+    &.animate
+      img,
+      .grid
+        li
+          &.animate
+            h3
+              -webkit-animation: showMe 1.5s step-end forwards
+              animation: showMe 1.5s step-end forwards
+
+@-webkit-keyframes showMe
+  from
+    visibility: hidden
+  60%,100%
+    visibility: visible
+
+
+@keyframes showMe
+  from
+    visibility: hidden
+  60%,100%
+    visibility: visible
+
+.grid
+  li
+    &.shown
+      img,
+      .grid
+        li
+          &.shown
+            h3
+              visibility: visible
+
+.blog-detail
+  clear: both
+  overflow: hidden
+  padding: 0 0 80px
+  font-size: 20px
+  max-width: 920px
+  margin: 0 auto
+
+
+.blog-innercontent
+  padding: 20px 0
+
+.blog-detail
+  h2
+    font-size: 24px
+
+
+.blog-innercontent
+  img
+    margin-bottom: 20px
+    border: 1px solid $background
+    padding: 4px
+
+.blog-detail
+  ul,
+  .blog-detail
+    ol
+      margin-bottom: 30px
+
+@media screen and (min-width: 992px)
+    .blog-detail
+      h2
+        font-size: 36px
+
+.quake-slider
+  width: 990px
+  height: 306px
+  position: relative
+  overflow: hidden
+
+.quake-nav
+  a
+    position: absolute
+    top: 45%
+    text-decoration: none
+    height: 38px
+    width: 37px
+    background-repeat: $background-no-repeat
+    z-index: 10000
+    text-index: -9999px
+    +webkit-function(none)
+
+.quake-prev
+  left: 0px
+  margin-left: 2px
+
+
+.quake-slider-caption-container-common
+  background-color: black
+  position: absolute
+  z-index: $z-index - 1
+  width: 220px
+  height: 310px
+
+
+.quake-slider-caption-common
+  color: white
+  font-weight: bold
+  font-size: 22px
+  font-family: $default-font
+  width: 210px
+  height: 300px
+  position: absolute
+  z-index: $z-index
+  padding: 10px
+
+.quake-slider-caption-container-right
+  left: 750px
+  padding-left: 25px
+  margin-right: 10px
+  @extend .quake-slider-caption-container-common
+
+
+.quake-slider-caption-right
+  left: 750px
+  margin-right: 10px
+  @extend .quake-slider-caption-common
+
+
+.quake-slider-caption-container-left
+  @extend .quake-slider-caption-container-common
+  padding: 0 0 0 10px
+  left: 0
+  margin-left: 10px
+
+.quake-slider-caption-left
+  @extend .quake-slider-caption-common
+  left: 0
+  margin-left: 10px
+
+.quake-slider-caption-container-top-and-bottom
+  background-color: black
+  position: absolute
+  z-index: $z-index - 1
+  padding: 0
+  width: 990px
+  height: 50px
+
+.quake-slider-caption-container-bottom
+  @extend .quake-slider-caption-container-top-and-bottom
+  bottom: 0
+  padding-left: 20px
+  margin-bottom: 10px
+
+.quake-slider-caption-container-top
+  @extend .quake-slider-caption-container-top-and-bottom
+  top: 0
+  padding-left: 10px
+  margin-top: 10px
+
+.quake-slider-caption-top-bottom-common
+  color: white
+  font-weight: bold
+  font-size: 22px
+  font-family: $default-font
+  width: 990px
+  height: 50px
+  position: absolute
+  z-index: $z-index
+
+.quake-slider-caption-bottom
+  @extend .quake-slider-caption-top-bottom-common
+  bottom: 0
+  padding-left: 10px
+  padding-top: 10px
+
+.quake-slider-caption-top
+  @extend .quake-slider-caption-top-bottom-common
+  top: 0
+  padding: 10px 0 0 10px
+  margin-top: 10px
+
+.quake-nav-wrapper
+  width: 990px
+  position: relative
+  z-index: $z-index
+  top: 0
+  left: 0
+
+.quake-nav-container
+  margin: 20px auto auto
+
+.quake-nav-control
+  width: 22px
+  height: 22px
+  cursor: pointer
+  display: inline-block
+  background-repeat: $background-no-repeat
+  text-index: -9999px
+  border: 0
+  +webkit-function(none)
+
+.quake-nav-control
+  &.active
+
+
+.quake-highlight
+  color: yellow
+
+.quake-highlight
+  a
+    color: yellow
+
+.quake-link
+  position: absolute
+  z-index: $z-index - 1
+
+.quake-thumbnail
+  position: absolute
+  z-index: 111
+  width: 98px
+  height: 76px
+  overflow: hidden
+
+.quake-thumbnail-preview
+  width: 84px
+  height: 48px
+  margin: 7px 0 0 7px
+  overflow: hidden
+  background-color: white
+
+.quake-thumbnail-preview
+  img
+    border: none
+
+.fshare-box
+  margin: 10px 0 0
+  padding: 0
+
+.fshare-compact
+  position: absolute
+  top: 0
+  padding: 10px
+  color: white
+  width: 70px
+  padding: 10px !important
+
+.fshare-compact
+  #fshare-collapsed
+    width: 80px !important
+    height: 50px
+    color: white
+    background-color: #555
+    text-align: $default-text-align
+    line-height: 50px
+    cursor: pointer
+    position: relative
+
+.fshare-compact
+  #fshare-close
+    background: 0 -210px $background-no-repeat
+    height: 26px
+    width: 26px
+    position: absolute
+    left: 80px
+    top: -15px
+    cursor: pointer
+
+.fshare-compact
+  #fshare-expanded
+    height: 280px
+    background-color: black
+    opacity: .8
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"
+    filter: alpha(opacity=80)
+    -moz-opacity: .8
+    -khtml-opacity: .8
+    width: 60px !important
+    padding: 10px !important
+
+.fshare-default
+  position: absolute
+  top: 0px
+  padding: 10px
+  background-color: white
+  +border-radius(4px)
+
+.fshare-large
+  position: absolute
+  top: 0px
+  right: 0px
+  padding: 10px
+  margin-top: 10px
+  background-color: white
+  +border-radius(4px)
+  z-index: 99999
+  border: 1px solid $background
+
+.fshare-large
+  .fshare-button
+    width: 100px
+    height: 37px
+    background-repeat: $background-no-repeat
+    cursor: pointer
+    color: white
+    font-family: $font-family
+    font-weight: bold
+    font-size: 11px
+    padding-top: 4px
+
+.fshare-large
+  .fshare-button
+    &.fb
+
+
+.fshare-large
+  .fshare-button
+    span
+      display: block
+      margin-left: 40px
+      line-height: 1.2
+
+a
+  &.social-label
+    text-decoration: none !important
+    color: white !important
+
+.fshare-wide
+  background-color: #393939
+  +border-radius(6px)
+  width: 124px
+  position: absolute
+  top: 0px
+  padding: 10px 2px
+
+
+.fshare-common-css
+  background-repeat: $background-no-repeat
+  cursor: pointer
+  color: black
+  font-family: $font-family
+  font-weight: bold
+  font-size: $default-font
+  padding-top: 4px
+
+.fshare-wide
+  .fshare-button
+    width: 116px
+    height: 36px
+    @extend .fshare-common-css
+
+
+.fshare-wide
+  span
+    display: block
+    margin-left: 50px
+    margin-top: 6px
+    line-height: 1.2
+
+.fshare-icon
+  background-color: #393939
+  +border-radius(6px)
+  width: 90px
+  margin-left: 10px
+  position: absolute
+  top: 0px
+  padding-left: 10px
+  padding-bottom: 10px
+
+.fshare-icon
+  .fshare-button
+    width: 39px
+    height: 36px
+    @extend .fshare-common-css
+
+.fshare-icon
+  span
+    display: block
+    margin-left: 50px
+    margin-top: 6px
+    color: white !important
+    line-height: 1.2
+
+
+
+
+
+
+
+
+
+
+
+
+

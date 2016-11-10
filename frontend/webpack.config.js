@@ -23,6 +23,13 @@ var config = {
                 query: {
                     presets: ['es2015', 'react']
                 }
+            },
+            {
+                test: /\.css|.sass$/,
+                loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader"
             }
         ]
     }
