@@ -5,11 +5,66 @@
     <meta charset = "UTF-8">
     <base href="/">
     <title>React App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="app/js/plugin/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app/js/plugin/jquery.pinto.js"></script>
+    <script src="app/js/plugin/push-menu.js"></script>
+    <script src="app/js/plugin/classie.js"></script>
+    <script src="app/js/plugin/modernizr.custom.js"></script>
+    <script src="app/js/plugin/uisearch.js"></script>
 </head>
 
 <body>
 <div id = "main"></div>
 <script src = "app/js/main.js"></script>
+<script>
+    $(window).on("click",function(e){
+        var container = $("#navbar");
+        if (!container.is(e.target) && container.has(e.target).length === 0){
+            container.removeAttr("style");
+            container.addClass("hideme");
+        }
+        else{
+            container.removeAttr("style");
+            container.removeClass("hideme");
+        }
+    });
+    $("#show").click(function(e) {
+        $("#navbar").show();
+        e.stopPropagation();
+    });
+    $(document).ready(function () {
+        fixPosition();
+        $(window).resize(function() {
+            fixPosition();
+        });
+    });
+    var resizeTimer;
+    function fixPosition() {
+        resizeTimer = setTimeout(function() {
+            var body_size = $('section').width();
+            if (window.matchMedia("(max-width: 767px)").matches) {
+                $(".garage").insertBefore(".company");
+                $(".lang").insertAfter(".company");
+            }
+            else{
+                $(".garage").insertBefore(".profile");
+                $(".lang").insertAfter(".profile");
+            }
+        });
+    }
+   // new UISearch( document.getElementById( 'sb-search' ) );
+</script>
+<script src="app/js/plugin/masonry.pkgd.min.js"></script>
+<script src="app/js/plugin/imagesloaded.pkgd.min.js"></script>
+<script src="app/js/plugin/classie.js"></script>
+<script src="app/js/plugin/colorfinder-1.1.js"></script>
+<script src="app/js/plugin/gridScrollFx.js"></script>
+<script>
+    new GridScrollFx( document.getElementById( 'grid' ), {
+        viewportFactor : 0.4
+    } );
+</script>
 </body>
 
 </html>
