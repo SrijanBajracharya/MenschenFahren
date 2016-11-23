@@ -12,6 +12,11 @@ import com.insightfools.menschen.module.event.entity.Event;
 import com.insightfools.menschen.module.event.entity.EventPhoto;
 import com.insightfools.menschen.module.event.service.EventPhotoService;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijan.bajracharya@gmail.com>
+ *
+ */
 public class EventPhotoServiceImpl implements EventPhotoService {
 
     @Inject
@@ -27,6 +32,13 @@ public class EventPhotoServiceImpl implements EventPhotoService {
         }
     }
 
+    /**
+     * Handles persist Functionality of {@link EventPhoto}
+     * 
+     * @param event
+     * @param photoUrls
+     * @throws SaveFailException
+     */
     private void saveEventphoto(Event event, List<String> photoUrls) throws SaveFailException {
         for (String photoUrl : photoUrls) {
             EventPhoto eventPhoto = new EventPhoto();

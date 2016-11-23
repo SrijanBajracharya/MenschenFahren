@@ -11,6 +11,11 @@ import com.insightfools.menschen.module.user.dao.UserProfileDao;
 import com.insightfools.menschen.module.user.entity.UserInterest;
 import com.insightfools.menschen.module.user.entity.UserProfile;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijan.bajracharya@gmail.com>
+ *
+ */
 public class UserInterestServiceImpl {
 
     @Inject
@@ -38,6 +43,14 @@ public class UserInterestServiceImpl {
 
     }
 
+    /**
+     * sets different elements of {@link UserInterest} and saves {@link UserInterest}s
+     * 
+     * @param event
+     * @param userProfile
+     * @return
+     * @throws SaveFailException
+     */
     private UserInterest saveUserInterest(Event event, UserProfile userProfile) throws SaveFailException {
         UserInterest userInterest = new UserInterest();
         userInterest.setEvent(event);
@@ -46,6 +59,15 @@ public class UserInterestServiceImpl {
         return userInterestDao.persist(userInterest);
     }
 
+    /**
+     * Handles Merge Functionality of {@link UserInterest}
+     * 
+     * @param event
+     * @param userInterest
+     * @param userProfile
+     * @return
+     * @throws SaveFailException
+     */
     private UserInterest mergeUserInterest(Event event, UserInterest userInterest, UserProfile userProfile) throws SaveFailException {
         userInterest.setEvent(event);
         userInterest.setUserProfile(userProfile);

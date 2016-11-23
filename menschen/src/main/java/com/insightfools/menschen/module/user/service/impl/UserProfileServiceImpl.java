@@ -8,6 +8,11 @@ import com.insightfools.menschen.module.user.dao.UserProfileDao;
 import com.insightfools.menschen.module.user.entity.UserProfile;
 import com.insightfools.menschen.module.user.service.UserProfileService;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijan.bajracharya@gmail.com>
+ *
+ */
 public class UserProfileServiceImpl implements UserProfileService {
 
     @Inject
@@ -30,6 +35,17 @@ public class UserProfileServiceImpl implements UserProfileService {
 
     }
 
+    /**
+     * Handles persist Functionality of {@link UserProfile}
+     * 
+     * @param firstName
+     * @param lastName
+     * @param address
+     * @param phoneNumber
+     * @param profilePhoto
+     * @return {@link UserProfile}
+     * @throws SaveFailException
+     */
     private UserProfile saveUserProfile(String firstName, String lastName, String address, String phoneNumber, String profilePhoto)
             throws SaveFailException {
         UserProfile userProfile = new UserProfile();
@@ -46,6 +62,18 @@ public class UserProfileServiceImpl implements UserProfileService {
         return userProfileDao.persist(userProfile);
     }
 
+    /**
+     * Handles Merge Functionality of {@link UserProfile}
+     * 
+     * @param profileInfo
+     * @param firstName
+     * @param lastName
+     * @param address
+     * @param phoneNumber
+     * @param profilePhoto
+     * @return {@link UserProfile}
+     * @throws SaveFailException
+     */
     private UserProfile mergeUserProfile(UserProfile profileInfo, String firstName, String lastName, String address, String phoneNumber,
             String profilePhoto) throws SaveFailException {
         profileInfo.setAddress(address);

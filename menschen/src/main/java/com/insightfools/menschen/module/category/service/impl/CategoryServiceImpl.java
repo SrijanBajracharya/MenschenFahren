@@ -11,6 +11,11 @@ import com.insightfools.menschen.module.category.dao.CategoryDao;
 import com.insightfools.menschen.module.category.entity.Category;
 import com.insightfools.menschen.module.category.service.CategoryService;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijan.bajracharya@gmail.com>
+ *
+ */
 public class CategoryServiceImpl implements CategoryService {
 
     @Inject
@@ -36,6 +41,15 @@ public class CategoryServiceImpl implements CategoryService {
         }
     }
 
+    /**
+     * Handles persist functionality of {@link Category}
+     * 
+     * @param name
+     * @param title
+     * @param description
+     * @return {@link Category}
+     * @throws SaveFailException
+     */
     private Category saveCategory(String name, String title, String description) throws SaveFailException {
         Category category = new Category();
         category.setDescription(description);
@@ -45,6 +59,16 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryDao.persist(category);
     }
 
+    /**
+     * Handles merge functionality of {@link Category}
+     * 
+     * @param category
+     * @param name
+     * @param title
+     * @param description
+     * @return {@link Category}
+     * @throws SaveFailException
+     */
     private Category mergeCategory(Category category, String name, String title, String description) throws SaveFailException {
         category.setDescription(description);
         category.setName(name);

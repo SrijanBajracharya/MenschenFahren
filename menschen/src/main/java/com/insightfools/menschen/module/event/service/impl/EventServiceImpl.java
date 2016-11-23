@@ -10,6 +10,11 @@ import com.insightfools.menschen.module.event.dao.EventDao;
 import com.insightfools.menschen.module.event.entity.Event;
 import com.insightfools.menschen.module.event.service.EventService;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijan.bajracharya@gmail.com>
+ *
+ */
 public class EventServiceImpl implements EventService {
 
     @Inject
@@ -33,6 +38,18 @@ public class EventServiceImpl implements EventService {
         }
     }
 
+    /**
+     * Handles persist functionality of Event Entity
+     * 
+     * @param userId
+     * @param name
+     * @param title
+     * @param description
+     * @param address
+     * @param category
+     * @return {@link Event}
+     * @throws SaveFailException
+     */
     private Event saveEvent(Long userId, String name, String title, String description, String address, Category category)
             throws SaveFailException {
         Event event = new Event();
@@ -46,6 +63,18 @@ public class EventServiceImpl implements EventService {
         return eventDao.persist(event);
     }
 
+    /**
+     * Handles Merge Functionality of {@link Event}
+     * 
+     * @param event
+     * @param name
+     * @param title
+     * @param description
+     * @param category
+     * @param address
+     * @return {@link Event}
+     * @throws SaveFailException
+     */
     private Event mergeEvent(Event event, String name, String title, String description, Category category, String address)
             throws SaveFailException {
         event.setAddress(address);
