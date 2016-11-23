@@ -27,6 +27,10 @@ public class UserProfile extends BaseEntity implements Serializable {
     public static final String FIND_ALL = PREFIX + "findAll";
     public static final String FIND_ALL_QUERY = "SELECT up FROM UserProfile up";
 
+    @Column(name = "user_name")
+    @NotNull
+    private String userName;
+
     @Column(name = "first_name")
     @NotNull
     private String firstName;

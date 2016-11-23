@@ -20,7 +20,8 @@ import com.insightfools.menschen.orm.BaseEntity;
  */
 @Entity
 @Table(name = "user_interest")
-@NamedQueries({ @NamedQuery(name = UserInterest.FIND_ALL, query = UserInterest.FIND_ALL_QUERY) })
+@NamedQueries({ @NamedQuery(name = UserInterest.FIND_ALL, query = UserInterest.FIND_ALL_QUERY),
+        @NamedQuery(name = UserInterest.FIND_BY_EVENT_ID, query = UserInterest.FIND_BY_EVENT_ID_QUERY) })
 public class UserInterest extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -101989028138457982L;
@@ -28,6 +29,9 @@ public class UserInterest extends BaseEntity implements Serializable {
     public static final String PREFIX = "user.userInterest";
     public static final String FIND_ALL = PREFIX + "findAll";
     public static final String FIND_ALL_QUERY = "SELECT ui FROM UserInterest ui";
+
+    public static final String FIND_BY_EVENT_ID = PREFIX + "findByEventId";
+    public static final String FIND_BY_EVENT_ID_QUERY = "SELECT ui FROM UserInterest ui WHERE ui.event.id=:eventId";
 
     @ManyToOne
     @JoinColumn(name = "user_profile_id", referencedColumnName = "id")
