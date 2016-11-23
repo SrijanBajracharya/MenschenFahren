@@ -10,7 +10,7 @@ import com.insightfools.menschen.orm.BaseEntity;
 
 /**
  * 
- * @author Srijan Bajracharya<srijanbajracharya@lftechnology.com>
+ * @author Srijan Bajracharya<srijan.bajracharya@gmail.com>
  *
  */
 @Entity

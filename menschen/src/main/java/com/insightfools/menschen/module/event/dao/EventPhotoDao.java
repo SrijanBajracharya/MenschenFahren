@@ -14,6 +14,11 @@ import com.insightfools.menschen.logger.LogMaker;
 import com.insightfools.menschen.module.event.entity.EventPhoto;
 import com.insightfools.menschen.orm.GenericDao;
 
+/**
+ * 
+ * @author Srijan Bajracharya<srijan.bajracharya@gmail.com>
+ *
+ */
 @Interceptors({ LogMaker.class })
 public class EventPhotoDao implements GenericDao<EventPhoto, Long> {
 
