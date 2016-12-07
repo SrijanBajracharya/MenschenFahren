@@ -10,6 +10,10 @@ var History = ReactRouter.hashHistory;
 
 require("../css/signup.css");
 require("../sass/style.sass");
+//require("../css/style-new.css");
+//require("../css/push-menu.css");
+//require("../css/blog.css");
+require("../sass/style-new.sass");
 
 var App = React.createClass({
     render: function () {
@@ -34,6 +38,46 @@ var ListingSection = React.createClass({
     render: function(){
         return(
             <ul className="grid swipe-right" id="grid">
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
+                <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
                 <li><a href="#"><img src={require('../images/logo.jpg')} alt="dummy"/><h3>A fantastic title</h3></a></li>
             </ul>
         )
@@ -62,5 +106,7 @@ var Listing = React.createClass({
        )
    }
 });
+
+require("../js/utils/listFunctions");
 
 ReactDom.render(<App/>, document.querySelector("#main"));

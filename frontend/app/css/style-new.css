@@ -1,18 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
-@font-face {
+/*@font-face {
 	font-family: 'Brandon_reg';
-	src: url('../fonts/Brandon_reg.eot') format('embedded-opentype'),
-		url('../fonts/Brandon_reg.woff2') format('woff2'),
-		url('../fonts/Brandon_reg.woff') format('woff'),
-		url('../fonts/Brandon_reg.ttf') format('truetype'),
-		url('../fonts/Brandon_reg.svg#Brandon_reg') format('svg');
+	src: url("../fonts/Brandon_reg.eot") format("embedded-opentype"),
+		url("../fonts/Brandon_reg.woff2") format("woff2"),
+		url("../fonts/Brandon_reg.woff") format("woff"),
+		url("../fonts/Brandon_reg.ttf") format("truetype"),
+		url("../fonts/Brandon_reg.svg#Brandon_reg") format("svg");
 }
 
 @font-face {
 	font-family: 'Brandon_bld';
-	src: url('../fonts/Brandon_bld.eot') format('embedded-opentype'),
-		url('../fonts/Brandon_bld.woff2') format('woff2'),
+	src: url('../fonts/Brandon_bld.eot') format("embedded-opentype"),
+		url('../fonts/Brandon_bld.woff2') format("woff2"),
 		url('../fonts/Brandon_bld.woff') format('woff'),
 		url('../fonts/Brandon_bld.ttf') format('truetype'),
 		url('../fonts/Brandon_bld.svg#Brandon_bld') format('svg');
@@ -45,7 +45,7 @@
         url('../fonts/icomoon.svg?clt569#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
@@ -429,11 +429,11 @@ img {
 	color: #f5a623;
 }
 
-.btn-group>.btn:first-child:not (:last-child ):not ( .dropdown-toggle ), .btn-group>.btn:last-child:not (:first-child ), .btn-group>.dropdown-toggle:not
+/*.btn-group>.btn:first-child:not (:last-child ):not ( .dropdown-toggle ), .btn-group>.btn:last-child:not (:first-child ), .btn-group>.dropdown-toggle:not
 	(:first-child ) {
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
-}
+}*/
 
 a:hover, a:focus {
 	text-decoration: none;
@@ -780,28 +780,28 @@ main {
 	width: 24px;
 	height: 24px;
 	display: inline-block;
-	background-image: url(../images/icon/ic_card.png);
+	/*background-image: url(../images/icon/ic_card.png);*/
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
 }
 
 .view-option a.active .grid-icon {
-	background-image: url(../images/icon/hover/ic_card.png);
+	/*background-image: url(../images/icon/hover/ic_card.png);*/
 }
 
 .list-icon {
 	width: 24px;
 	height: 24px;
 	display: inline-block;
-	background-image: url(../images/icon/ic_list.png);
+	/*background-image: url(../images/icon/ic_list.png);*/
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
 }
 
 .view-option a.active .list-icon {
-	background-image: url(../images/icon/hover/ic_list.png);
+	/*background-image: url(../images/icon/hover/ic_list.png);*/
 }
 
 .view-option .btn-sm {
@@ -816,7 +816,7 @@ main {
 }
 
 .search-btn a {
-	background-image: url(../images/icon/ic_search.png);
+	/*background-image: url(../images/icon/ic_search.png);*/
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
@@ -827,7 +827,7 @@ main {
 }
 
 .search-btn a:hover {
-	background-image: url(../images/icon/hover/ic_search-hover.png);
+	/*background-image: url(../images/icon/hover/ic_search-hover.png);*/
 }
 
 .thumbnail {
@@ -1092,12 +1092,12 @@ main {
 	width: 60px;
 }
 
-.rating {
+/*.rating {
 	float: left;
 }
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
+!* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
    follow these rules. Every browser that supports :checked also supports :not(), so
-   it doesn’t make the test unnecessarily selective */
+   it doesn’t make the test unnecessarily selective *!
 .rating:not (:checked ) >input {
 	position: absolute;
 	top: -9999px;
@@ -1139,7 +1139,7 @@ main {
 	position: relative;
 	top: 2px;
 	left: 2px;
-}
+}*/
 
 footer {
 	background: #1b4e81;
@@ -1167,7 +1167,7 @@ footer {
 }
 
 .fav-icon a {
-	background-image: url(../images/icon/ic_love.png);
+	/*background-image: url(../images/icon/ic_love.png);*/
 	background-repeat: no-repeat;
 	background-position: top right;
 	background-size: cover;
@@ -1178,7 +1178,7 @@ footer {
 }
 
 .fav-icon a:hover {
-	background-image: url(../images/icon/Hover/ic_love.png);
+	/*background-image: url(../images/icon/Hover/ic_love.png);*/
 }
 
 .container-height, .dashboard-container {
@@ -1237,7 +1237,7 @@ footer {
 	display: block;
 }
 
-.sidebar-navigation a span.icon-dash {
+/*.sidebar-navigation a span.icon-dash {
 	background: url(../images/dash.png) no-repeat center 0;
 }
 
@@ -1255,7 +1255,7 @@ footer {
 
 .sidebar-navigation a span.icon-settings {
 	background: url(../images/settings.png) no-repeat center bottom;
-}
+}*/
 
 .sidebar-navigation a:hover {
 	text-decoration: none;
@@ -1427,7 +1427,7 @@ footer {
 	font-size: 16px;
 	padding: 0 0 0 20px;
 	margin: 16px 0 0 0;
-	background: url(../images/icon/ic_help.png) no-repeat 0 5px;
+	/*background: url(../images/icon/ic_help.png) no-repeat 0 5px;*/
 }
 
 .cs-form input[type='text'], .cs-form input[type='password'], .cs-form input[type='phone'],
@@ -1855,9 +1855,9 @@ footer {
 	float: none;
 }
 
-.image-list .icon-nav .dropdown-menu li:first-child {
+/*.image-list .icon-nav .dropdown-menu li:first-child {
 	border: 0;
-}
+}*/
 .center-block {
 	width: 100%;
 	display: table;
@@ -2809,7 +2809,7 @@ footer {
 }
 /* -------------- Company Pages -----------------------------------------*/
 .banner-container {
-	background: url("../images/main-banner.jpg") no-repeat center;
+	/*background: url("../images/main-banner.jpg") no-repeat center;*/
 	background-size: cover;
 	position: relative;
 	clear: both;
@@ -3053,7 +3053,7 @@ footer {
 }
 
 .vertical-tab .nav-tabs>li.active:after {
-	background-image: url(../images/bg-tab-btm-active.png);
+	/*background-image: url(../images/bg-tab-btm-active.png);*/
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	position: absolute;
@@ -3118,7 +3118,7 @@ footer {
 }
 
 .address-block .address {
-	background: url(../images/icon/ic_building.png) no-repeat 0 0/50px;
+	/*background: url(../images/icon/ic_building.png) no-repeat 0 0/50px;*/
 	padding: 12px 0 20px 65px;
 	margin: 0 0 5px;
 	font-family: 'Brandon_bld';
@@ -3126,7 +3126,7 @@ footer {
 }
 
 .callus {
-	background: url(../images/icon/ic_contact.png) no-repeat 0 0/50px;
+	/*background: url(../images/icon/ic_contact.png) no-repeat 0 0/50px;*/
 	padding: 12px 0 20px 65px;
 	margin: 0 0 5px;
 	font-family: 'Brandon_bld';
@@ -4162,7 +4162,7 @@ body.sticky .callout-container .btn {
 	.wizard-icon {
 		width: 50px;
 		height: 40px;
-		background: url(../images/icon/Hover/ic_car.png) no-repeat 0 3px/75%;
+		/*background: url(../images/icon/Hover/ic_car.png) no-repeat 0 3px/75%;*/
 		position: absolute;
 		left: 0;
 	}
@@ -4240,7 +4240,7 @@ body.sticky .callout-container .btn {
 		font-size: 32px;
 	}
 	.vertical-tab .nav-tabs>li.active {
-		background-image: url(../images/bg-tab-active.png);
+		/*background-image: url(../images/bg-tab-active.png);*/
 		background-repeat: no-repeat;
 		background-position: right top;
 		margin-right: -18px;
@@ -4293,9 +4293,9 @@ body.sticky .callout-container .btn {
 	.hideme {
 		display: none;
 	}
-	.dropdown:not (.hover-unset ):hover ul {
+	/*.dropdown:not (.hover-unset ):hover ul {
 		display: block;
-	}
+	}*/
 	.expand-image {
 		position: absolute;
 		right: 30px;
@@ -4709,7 +4709,7 @@ if it's not present, don't show loader */
 }
 
 .progress-logo {
-	background: url(../images/logo-grey.png) no-repeat;
+	/*background: url(../images/logo-grey.png) no-repeat;*/
 	margin: 0 auto;
 	width: 240px;
 	height: 47px;
@@ -4721,7 +4721,7 @@ if it's not present, don't show loader */
 }
 
 .progress-logo .inner {
-	background: url(../images/logo.png) no-repeat;
+	/*background: url(../images/logo.png) no-repeat;*/
 	width: 0;
 	height: 100%;
 	-webkit-transition: width 10s linear;

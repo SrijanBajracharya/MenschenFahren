@@ -1,0 +1,742 @@
+$background: #cecece
+$default-text-align: center
+$default-transition: all 200ms ease-out 0s
+
+=webkit-function($value)
+  -webkit-touch-callout: $value
+  -webkit-user-select: $value
+  -khtml-user-select: $value
+  -moz-user-select: $value
+  -ms-user-select: $value
+  -o-user-select: $value
+  user-select: $value
+
+=border-radius($radius)
+  border-radius: $radius
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+
+.bg-grey
+  background: #fbfbfb
+
+.blog-holder
+  clear:  both
+  overflow: hidden
+  margin: 0
+  position: relative
+
+.blog-container
+  clear: both
+  overflow: hidden
+
+.blog-header
+  border-bottom: 1px solid $background
+  text-align: $default-text-align
+  padding: 80px 0
+  margin-bottom: 60px
+
+.blog-header
+  h2
+    font-size: 36px
+    margin-bottom: 20px
+    color: #fff
+
+.blog-header
+  h2
+    &:after
+      background: $background
+      content: ""
+      display: block
+      height: 2px
+      margin: 20px auto 0
+      text-align: $default-text-align
+      width: 100px
+
+.blog-header
+  span
+    font-size: 24px
+    color: #fff
+
+.blog-item
+  clear: both
+  overflow: hidden
+  margin: 0px
+
+.blog-item
+  ul
+    list-style: none
+    margin: -2px 0 0 -2px
+    padding: 0
+    border-top: 1px solid #fbfbfb
+    clear: both
+    overflow: hidden
+
+.blog-item
+  ul
+    li
+      background: transparent
+      box-sizing: border-box
+      cursor: pointer
+      float: left
+      margin: 0
+      overflow: hidden
+      padding: 0
+      position: relative
+      transition: $default-transition
+      width: 33.333%
+      border-left: 1px solid #f1f1f1
+      border-top: 1px solid #f1f1f1
+
+.blog-item
+  a
+    color: #888888
+    display: block
+    padding: 40px
+    transition: $default-transition
+
+.blog-item
+  a
+    &:hover
+      background: #ffffff
+
+.blog-image
+  position: relative
+
+.blog-content
+  padding: 15px 0 0
+
+.blog-item
+  h2
+    font-size: 18px
+    margin-bottom: 10px
+
+.blog-detail-content
+  img
+    &.f-right
+      margin: 0 0 30px 30px
+
+.blog-detail-content
+  img
+    &.f-left
+      margin: 0 30px 30px 0
+
+.blog-item
+  h2
+    a
+      color: #333333
+
+.blog-pager
+  clear: both
+  overflow: hidden
+  padding: 50px 0
+  border-top: 1px solid #9b9b9b
+
+.pb-0
+  padding-bottom: 0
+
+.grid-wrap
+  clear: both
+  margin: 0 auto
+  padding: 0px
+
+.grid
+  margin: 0 auto
+  padding: 0
+  list-style: none
+  min-height: 500px
+
+.js
+  .grid
+    &.loaded
+      background: none
+
+.grid
+  li
+    display: inline-block
+    overflow: hidden
+    width: 314px
+    text-align: left
+    vertical-align: top
+
+.grid
+  li
+    &.wide
+      width: 942px
+
+.js
+  .grid
+    li
+      display: none
+      float: left
+
+.js
+  .grid
+    &.loaded
+      li
+        display: block
+
+.grid
+  li
+    > a,
+    .grid
+      li
+        img
+          display: block
+          outline: none
+          border: none
+
+.grid
+  li
+    > a
+      positive: relative
+      overflow: hidden
+      margin: 7px
+
+.grid
+  .curtain
+    position: absolute
+    top: 0
+    left: 0px
+    z-index: 100
+    width: 100%
+    height: 100%
+    background: #96cdc8
+
+.grid
+  &.swipe-right
+    .curtain
+      -webkit-transform: translate3d(-100%,0,0)
+      transform: translate3d(0,-100%,0)
+
+.grid
+  &.swipe-rotate
+    .curtain
+      width: 200%
+      height: 200%
+      -webkit-transform: rotate3d(0,0,1,90deg)
+      transform: rotate3d(0,0,1,90deg)
+      -webkit-transform-origin: top left
+      transform-origin: top left
+
+.grid
+  .curtain
+    &::after
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,1)
+      content: ""
+
+.grid
+  &.swipe-right
+    .curtain
+      &::after,
+      .grid
+        &.swipe-rotate
+          .curtain
+            &::after
+              left: -100%
+
+.grid
+  &.swipe-down
+    .curtain
+      &::after
+        top: -100%
+
+.grid
+  li
+    h3
+      position: absolute
+      bottom: 0
+      left: 0px
+      margin: 0px
+      padding: 20px
+      width: 100%
+      background: rgba(0,0,0,0.6)
+      color: #D3EEE2
+      text-align: right
+      text-transform: uppercase
+      letter-spacing: 1px
+      font-size: 1em
+      -webkit-transition: -webkit-transform 0.2s, color 0.2s
+      transition: transform 0.2s, color 0.2s
+
+.grid
+  li
+    > a
+      &::before
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100.5%
+        height: 100.5%
+        border: 0px solid transparent
+        background: rgba(0,0,0,0)
+        content: ""
+        -webkit-transition: border-width 0.2s, border-color 0.2s
+        transition: border-width 0.2s, border-color 0.2s
+
+.grid
+  li
+    &.shown
+      &:hover
+        h3
+          color: #fff
+          -webkit-transform: translate3d(0,-30px,0)
+          transform: translate3d(0,-30px,0)
+
+.grid
+  li
+    &.shown
+      &:hover
+        > a
+          &::before
+            border-width: 14px
+            border-color: #000000
+
+.grid
+  &.swipe-right
+    li
+      &.animate
+        .curtain
+          -webkit-animation: swipeRight 1.5s cubic-bezier(0.6,0,0.4,1) forwards
+          animation: swipeRight 1.5s cubic-bezier(0.6,0,0.4,1) forwards
+
+@-webkit-keyframes swipeRight
+  0%
+  50%,60%
+    -webkit-transform: translate3d(0,0,0)
+  100%
+    -webkit-transform: translate3d(100%,0,0)
+
+
+@keyframes swipeRight
+  0%
+  50%,60%
+    -webkit-transform: translate3d(0,0,0)
+    transform: translate(0)
+  100%
+    -webkit-transform: translate3d(100%,0,0)
+    transform: translate3d(100%,0,0)
+
+@-webkit-keyframes fadeOut
+  0%
+  50%,60%
+    opacity: 1
+  100%
+    opacity: 1
+
+@keyframes fadeOut
+  0%
+  50%,60%
+    opacity: 1
+  100%
+    opacity: 0
+
+.js
+  .grid
+    li
+      img,
+      .js
+        .grid
+          li
+            h3
+              visibility: hidden
+
+.grid
+  li
+    &.animate
+      img,
+      .grid
+        li
+          &.animate
+            h3
+              -webkit-animation: showMe 1.5s step-end forwards
+              animation: showMe 1.5s step-end forwards
+
+@-webkit-keyframes showMe
+  from
+    visibility: hidden
+  60%,100%
+    visibility: visible
+
+@keyframes showMe
+  from
+    visibility: hidden
+  60%,100%
+    visibility: visible
+
+.grid
+  li
+    &.shown
+      img,
+      .grid
+        li
+          &.shown
+            h3
+              visibility: visible
+
+.blog-detail
+  clear: both
+  overflow: hidden
+  padding: 0 0 80px
+  font-size: 20px
+  max-width: 920px
+  margin: 0 auto
+
+.blog-innercontent
+  padding: 20px 0
+
+.blog-detail
+  h2
+    font-size: 24px
+
+.blog-innercontent
+  img
+    margin-bottom: 20px
+    border: 1px solid $background
+    padding: 4px
+
+.blog-detail
+  ul,
+  .blog-detail
+    ol
+      margin-bottom: 30px
+
+@media screen and (min-width: 992px)
+  .blog-detail
+    h2
+      font-size: 36px
+
+.quake-slider
+  width: 990px
+  height: 306px
+  position: relative
+  overflow: hidden
+
+.quake-nav
+  a
+    position: absolute
+    top: 45%
+    text-decoration: none
+    width: 37px
+    height: 38px
+    background-repeat: no-repeat
+    z-index: 10000
+    cursor: pointer
+    text-indent: -9999px
+    +webkit-function(none)
+
+.quake-prev
+  left: 0px
+  margin-left: 2px
+
+.quake-next
+  right: 0px
+  margin-right: 2px
+
+.caption-slider-quake
+  color: White
+  font-weight: bold
+  font-size: 22px
+  font-family: Arial
+  width: 210px
+  height: 300px
+  position: absolute
+  z-index: 102
+  padding: 10px
+  margin-right: 10px
+
+.container-caption-slider-quake
+  background-color: black
+  position: absolute
+  z-index: 101
+  width: 220px
+  height: 310px
+  margin-right: 10px
+
+.quake-slider-caption-container-right
+  left: 750px
+  padding: 0 0 0 25px
+  @extend .container-caption-slider-quake
+
+.quake-slider-caption-right
+  left: 750px
+  @extend .caption-slider-quake
+
+.quake-slider-caption-container-left
+  padding: 0 0 0 10px
+  left: 0
+  @extend .container-caption-slider-quake
+
+.quake-slider-caption-left
+  left: 0
+  @extend .caption-slider-quake
+
+.container-caption-slider-quake-top-bottom
+  background-color: black
+  position: absolute
+  z-index: 101
+  width: 990px
+  height: 50px
+  margin-bottom: 10px
+
+.quake-slider-caption-container-bottom
+  padding: 0 0 0 20px
+  bottom: 0px
+  @extend .container-caption-slider-quake-top-bottom
+
+.caption-slider-quake-top-bottom
+  color: white
+  font-weight: bold
+  font-size: 22px
+  font-family: Arial
+  width: 990px
+  height: 50px
+  position: absolute
+  z-index: 102
+  padding-left: 10px
+  padding-top: 10px
+
+.quake-slider-caption-bottom
+  bottom: 0px
+  @extend .caption-slider-quake-top-bottom
+
+.quake-slider-caption-container-top
+  padding: 0 0 0 10px
+  top: 0
+  @extend .container-caption-slider-quake-top-bottom
+
+.quake-slider-caption-top
+  top: 0px
+  margin-top: 10px
+  @extend .caption-slider-quake-top-bottom
+
+
+.quake-nav-wrapper
+  width: 990px
+  position: relative
+  z-index: 102
+  top: 0
+  left: 0
+
+.quake-nav-container
+  margin: 20px auto auto
+
+.quake-nav-control
+  width: 22px
+  height: 22px
+  cursor: pointer
+  display: inline-block
+  background-repeat: no-repeat
+  text-index: -9999px
+  border: 0
+  +webkit-function(none)
+
+
+.quake-highlight
+  color: yellow
+
+.quake-highlight
+  a
+    color: yellow
+
+.quake-link
+  position: absolute
+  z-index: 101
+
+.quake-thumbnail
+  position: absolute
+  z-index: 111
+  width: 98px
+  height: 76px
+  overflow: hidden
+
+.quake-thumbnail-preview
+  width: 84px
+  height: 48px
+  margin: 7px 0 0 7px
+  overflow: hidden
+  background-color: white
+
+.quake-thumbnail-preview
+  img
+    border: none
+
+.fshare-box
+  margin: 10px 0 0
+  padding: 0
+
+.fshare-compact
+  position: absolute
+  top: 0
+  padding: 10px
+  color: white
+  width: 70px
+  padding: 10px !important
+
+.fshare-compact
+  #fshare-collapsed
+    width: 80px !important
+    height: 50px
+    color: white
+    background-color: #555
+    text-align: center
+    line-height: 50px
+    cursor: pointer
+    position: relative
+
+.fshare-compact
+  #fshare-close
+    background: 0 -210px no-repeat
+    height: 26px
+    width: 26px
+    position: absolute
+    left: 80px
+    top: -15px
+    cursor: pointer
+
+.fshare-compact
+  #fshare-expanded
+    height: 280px
+    background-color: black
+    opacity: .8
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"
+    filter: alpha(opacity=80)
+    -moz-opacity: .8
+    -khtml-opacity: .8
+    width: 60px !important
+    padding: 10px !important
+
+.fshare-default
+  position: absolute
+  top: 0px
+  padding: 10px
+  background-color: white
+  +border-radius(4px)
+
+.fshare-large
+  position: absolute
+  top: 0px
+  right: 0px
+  padding: 10px
+  margin-top: 10px
+  background-color: white
+  +border-radius(4px)
+  z-index: 99999
+  border: 1px solid $background
+
+.fshare-large
+  .fshare-button
+    width: 100px
+    height: 37px
+    background-repeat: no-repeat
+    cursor: pointer
+    color: white
+    font-family: Arial
+    font-weight: bold
+    font-size: 11px
+    padding-top: 4px
+
+.fshare-large
+  .fshare-button
+    &.fb
+
+
+.fshare-large
+  .fshare-button
+    span
+      display: block
+      margin-left: 40px
+      line-height: 1.2
+
+a
+  &.social-label
+    text-decoration: none !important
+    color: white !important
+
+.fshare-wide
+  background-color: #393939
+  +border-radius(6px)
+  width: 124px
+  position: absolute
+  top: 0px
+  padding: 10px 2px
+
+
+.fshare-common-css
+  background-repeat: no-repeat
+  cursor: pointer
+  color: black
+  font-family: Arial
+  font-weight: bold
+  font-size: 12px
+  padding-top: 4px
+
+.fshare-wide
+  .fshare-button
+    width: 116px
+    height: 36px
+    @extend .fshare-common-css
+
+
+.fshare-wide
+  span
+    display: block
+    margin-left: 50px
+    margin-top: 6px
+    line-height: 1.2
+
+.fshare-icon
+  background-color: #393939
+  +border-radius(6px)
+  width: 90px
+  margin-left: 10px
+  position: absolute
+  top: 0px
+  padding-left: 10px
+  padding-bottom: 10px
+
+.fshare-icon
+  .fshare-button
+    width: 39px
+    height: 36px
+    @extend .fshare-common-css
+
+.fshare-icon
+  span
+    display: block
+    margin-left: 50px
+    margin-top: 6px
+    color: white !important
+    line-height: 1.2
+
+.blog-pager
+  li
+    &.prev-post
+      float: left
+
+.blog-pager
+  li
+    &.next-post
+      float: right
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
