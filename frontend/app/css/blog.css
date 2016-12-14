@@ -14,7 +14,7 @@
     overflow: hidden;
 }
 .blog-header {
-    background: url(../images/blog-header.jpg) no-repeat center center;
+    /*background: url(../images/blog-header.jpg) no-repeat center center;*/
     border-bottom: 1px solid #cecece;
     text-align: center;
     padding: 80px 0;
@@ -126,7 +126,7 @@
 }
 
 .js .grid {
-    background: url(../images/loading.gif) no-repeat 50% 100px;
+    /*background: url(../images/loading.gif) no-repeat 50% 100px;*/
 }
 
 .js .grid.loaded {
@@ -364,7 +364,7 @@
     height:306px;
     position: relative;
     overflow: hidden; /*-webkit-touch-callout: none;     -webkit-user-select: none;     -khtml-user-select: none;     -moz-user-select: none;     -ms-user-select: none;     -o-user-select: none;     user-select: none;*/
-    background:url(../images/loading.gif) no-repeat center;    
+    /*background:url(../images/loading.gif) no-repeat center;*/
 }
 .quake-nav a
 {
@@ -389,21 +389,21 @@
 {
     left: 0px;
     margin-left: 2px;
-    background-image: url(../images/arrow-left.png);
+    /*background-image: url(../images/arrow-left.png);*/
 }
 .quake-next
 {
     right: 0px;
     margin-right: 2px;
-    background-image: url(../images/arrow-right.png);
+    /*background-image: url(../images/arrow-right.png);*/
 }
 .quake-prev:hover
 {
-    background-image: url(../images/arrow-left-active.png);
+    /*background-image: url(../images/arrow-left-active.png);*/
 }
 .quake-next:hover
 {
-    background-image: url(../images/arrow-right-active.png);
+    /*background-image: url(../images/arrow-right-active.png);*/
 }
 .quake-slider-caption-container-right
 {
@@ -535,7 +535,7 @@
     height: 22px;
     cursor: pointer;
     display: inline-block; /* background-image: url('images/bullets.png');*/
-    background-image: url(../images/circle.png);
+    /*background-image: url(../images/circle.png);*/
     background-repeat: no-repeat;
     text-indent: -9999px;
     border: 0;
@@ -551,7 +551,7 @@
 .quake-nav-control.active
 {
     /*background-position: 0px -22px;*/
-    background-image: url(../images/circle-active.png);
+    /*background-image: url(../images/circle-active.png);*/
 }
 .quake-highlight
 {
@@ -573,7 +573,7 @@
     width: 98px;
     height: 76px;
     overflow: hidden;
-    background: url(../images/thumb_bg.png) no-repeat center center;
+    /*background: url(../images/thumb_bg.png) no-repeat center center;*/
 }
 .quake-thumbnail-preview
 {
@@ -615,7 +615,7 @@
 }
 .fshare-compact #fshare-close
 {
-    background-image: url(../images/share_sprite.png);
+    /*background-image: url(../images/share_sprite.png);*/
     background-repeat: no-repeat;
     background-position: 0 -240px;
     height: 26px;
@@ -677,7 +677,7 @@
     font-size: 11px;
     padding-top: 4px;
 }
-.fshare-large .fshare-button.fb
+/*.fshare-large .fshare-button.fb
 {
     background-image: url(../images/tab-fb.png);
 }
@@ -692,7 +692,7 @@
 .fshare-large .fshare-button.in
 {
     background-image: url(../images/tab-in.png);
-}
+}*/
 .fshare-large .fshare-button span
 {
     display: block;
@@ -727,7 +727,7 @@ a.social-label
     font-size: 12px;
     padding-top: 4px;
 }
-.fshare-wide .fshare-button.fb
+/*.fshare-wide .fshare-button.fb
 {
     background-image: url(../images/wider-fb.png);
 }
@@ -742,7 +742,7 @@ a.social-label
 .fshare-wide .fshare-button.in
 {
     background-image: url(../images/wider-in.png);
-}
+}*/
 .fshare-wide span
 {
     display: block;
@@ -776,7 +776,7 @@ a.social-label
     font-size: 12px;
     padding-top: 4px;
 }
-.fshare-icon .fshare-button.fb
+/*.fshare-icon .fshare-button.fb
 {
     background-image: url(../images/iconic-fb.png);
 }
@@ -799,4 +799,4 @@ a.social-label
     margin-top: 6px;
     color: White !important;
     line-height:1.2;
-}
+}*/
